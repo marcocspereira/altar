@@ -1,12 +1,20 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { GeneratorComponent } from './pages/generator/generator.component';
-import { PaymentsComponent } from './pages/payments/payments.component';
 
 const routes: Routes = [
   { path: '', redirectTo: '/generator', pathMatch: 'full' },
-  { path: 'generator', component: GeneratorComponent },
-  { path: 'payments', component: PaymentsComponent },
+  {
+    path: 'generator',
+    loadChildren: () =>
+      import('./pages/generator/generator.module').then(
+        (m) => m.GeneratorModule
+      ),
+  },
+  {
+    path: 'payments',
+    loadChildren: () =>
+      import('./pages/payments/payments.module').then((m) => m.PaymentsModule),
+  },
 ];
 
 @NgModule({
