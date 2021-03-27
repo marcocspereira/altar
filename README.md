@@ -65,7 +65,7 @@ The user should be able to **navigate** between the 2 pages whilst not losing an
 
 ---
 
-## To run
+## To run local machine
 
 - to run the app: `http://localhost:4200`
 - to run the tests: `http://localhost:9876`

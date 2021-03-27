@@ -11,7 +11,7 @@ services:
     ports:
       - 4200:4200
     command: >
-      bash -c "npm install && ng serve --host 0.0.0.0"
+      bash -c "npm install && ng serve --host 0.0.0.0 --disableHostCheck"
   altar_test:
     image: trion/ng-cli-karma:latest
     container_name: "altar_test"
