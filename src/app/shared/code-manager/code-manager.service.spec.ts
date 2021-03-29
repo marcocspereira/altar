@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { MatrixService } from './matrix.service';
+import { CodeManagerService } from './code-manager.service';
 
-describe('MatrixService', () => {
-  let service: MatrixService;
+describe('CodeManagerService', () => {
+  let service: CodeManagerService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(MatrixService);
+    service = TestBed.inject(CodeManagerService);
   });
 
   it('should be created', () => {
