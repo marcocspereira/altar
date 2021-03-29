@@ -1,0 +1,4 @@
+<p [ngClass]="{ live: status === true }">
+  {{ status ? "LIVE" : "STOPPED" }}
+</p>
+<div class="code-holder">YOUR CODE: <ng-content></ng-content></div>
