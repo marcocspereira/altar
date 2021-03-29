@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
-import { timer, Subject } from 'rxjs';
-import { map } from 'rxjs/operators';
+import { timer, ReplaySubject, BehaviorSubject, NEVER } from 'rxjs';
+import { map, switchMap } from 'rxjs/operators';
 import { Matrix } from '../matrix/matrix';
 import { Coordinate } from '../properties/coordinate.type';
 import { GeneratedCode } from '../properties/generated-code.type';
@@ -10,13 +10,10 @@ import { GeneratedCode } from '../properties/generated-code.type';
 })
 export class CodeManagerService {
   private _matrix = new Matrix(10, 10);
-  private _generatedCode = new Subject<GeneratedCode>();
-  private _codeGenerationStatus: boolean = false;
+  private _generatedCode = new ReplaySubject<GeneratedCode>(1);
+  private _codeGenerationStatus = new BehaviorSubject<boolean>(false);
   private _jokerCharacter: string;
 
-  get codeGenerationStatus(): boolean {
-    return this._codeGenerationStatus;
-  }
   set jokerCharacter(value: string) {
     this._jokerCharacter = value;
     this._matrix.jokerCharacter = value;
@@ -26,10 +23,12 @@ export class CodeManagerService {
   }
 
   generatedCodeObservable$ = this._generatedCode.asObservable();
+  codeGenerationStatusObservable$ = this._codeGenerationStatus.asObservable();
 
   constructor() {
-    timer(0, 2000)
+    this.codeGenerationStatusObservable$
       .pipe(
+        switchMap((on) => (on ? timer(0, 2000) : NEVER)),
         map((_) => {
           const date: Date = new Date();
           const seconds = this._getSecondsFromDate(date);
@@ -47,8 +46,8 @@ export class CodeManagerService {
       });
   }
 
-  toggleCodeGenerationStatus() {
-    this._codeGenerationStatus = !this.codeGenerationStatus;
+  set codeGenerationStatus(value: boolean) {
+    this._codeGenerationStatus.next(value);
   }
 
   private _getSecondsFromDate(date: Date = new Date()): number[] {

@@ -1,4 +1,5 @@
-.matrix-container {
+.matrix-container,
+.code-box {
   width: 100%;
 }
 
@@ -18,4 +19,9 @@
 
 .right-column {
   text-align: right;
+}
+
+.input-box {
+  width: 20%;
+  text-align: center;
 }

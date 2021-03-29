@@ -4,7 +4,13 @@
   <div class="card-content">
     <div class="content">
       <div class="columns">
-        <div class="column is-half left-column">is-half</div>
+        <div class="column is-half left-column">
+          <input
+            class="input is-normal input-box"
+            type="text"
+            placeholder="Character"
+          />
+        </div>
         <div class="column is-half right-column">
           <button
             (click)="toggleStatus()"
@@ -27,8 +33,8 @@
           {{ char }}
         </div>
       </div>
-      <br />
-      <app-code-box [status]="status">{{ code }}</app-code-box>
+
+      <app-code-box class="code-box" [status]="status">{{ code }}</app-code-box>
     </div>
   </div>
 </div>
