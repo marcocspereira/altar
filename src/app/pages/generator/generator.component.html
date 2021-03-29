@@ -1,1 +1,34 @@
 <p>generator works!</p>
+
+<div class="card">
+  <div class="card-content">
+    <div class="content">
+      <div class="columns">
+        <div class="column is-half left-column">is-half</div>
+        <div class="column is-half right-column">
+          <button
+            (click)="toggleStatus()"
+            class="button"
+            [ngClass]="{
+              'is-success': !status,
+              'is-danger': status
+            }"
+          >
+            {{ status ? "STOP GENERATE 2D GRID" : "START GENERATE 2D GRID" }}
+          </button>
+        </div>
+      </div>
+
+      <div
+        *ngFor="let char of matrixChars; let i = index"
+        class="matrix-container"
+      >
+        <div class="matrix-val" [ngStyle]="{ width: 100 / matrixWidth + '%' }">
+          {{ char }}
+        </div>
+      </div>
+      <br />
+      <app-code-box [status]="status">{{ code }}</app-code-box>
+    </div>
+  </div>
+</div>

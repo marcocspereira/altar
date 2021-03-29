@@ -1,0 +1,21 @@
+.matrix-container {
+  width: 100%;
+}
+
+.matrix-val {
+  float: left;
+  padding: 10px;
+  background-color: #1abc9c;
+  color: #ffffff;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.left-column {
+  text-align: left;
+  padding: 10px;
+}
+
+.right-column {
+  text-align: right;
+}
