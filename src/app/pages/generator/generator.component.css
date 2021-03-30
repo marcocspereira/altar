@@ -21,6 +21,13 @@
   text-align: right;
 }
 
+.input-box-label {
+  line-height: 40px;
+  font-size: 15px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
 .input-box {
   width: 20%;
   text-align: center;
