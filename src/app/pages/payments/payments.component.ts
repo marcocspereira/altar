@@ -12,16 +12,28 @@ import { Matrix } from 'src/app/shared/matrix/matrix';
   templateUrl: './payments.component.html',
   styleUrls: ['./payments.component.css'],
 })
+/** Component that allows to list and create codes. */
 export class PaymentsComponent implements OnDestroy {
   private _subscription: Subscription = new Subscription();
+  /** Current matrix related to the code that user adds. */
   matrix: Matrix;
+  /** Current code that user adds. */
   code: string;
+  /** Status to manage if the generator is running or stopped.  */
   status: boolean;
+  /** Array of existing payment data. */
   paymentData: Array<PaymentData>;
+  /** A form to handle the act of achieve a new code with related name and amount. */
   paymentForm: FormGroup;
+  /** An array of error messages related with joker form input. */
   errorMessages: Array<string>;
+  /** A given payment data from the list that should be displayed in detail. */
   checksumHighlighted: PaymentData;
 
+  /**
+   * @param _codeManager The service that handles the random chars matrix and code generations.
+   * @param _paymentManager The service that integrates the payment data with an API.
+   */
   constructor(
     private _codeManager: CodeManagerService,
     private _paymentManager: PaymentManagerService
@@ -33,6 +45,10 @@ export class PaymentsComponent implements OnDestroy {
     this.paymentForm = this.createForm();
   }
 
+  /**
+   * Helper method that creates the form related with joker character.
+   * @returns the created FormGroup with the corresponding input and validations.
+   */
   createForm() {
     return new FormGroup(
       {
@@ -49,6 +65,10 @@ export class PaymentsComponent implements OnDestroy {
     );
   }
 
+  /**
+   * Helper method that allows to add a new code if all data is valid.
+   * It integrates with an API, using the payment manager service.
+   */
   addCode(): void {
     const isInvalidForm = this._manageFormInvalidity();
     if (isInvalidForm) {
@@ -64,22 +84,33 @@ export class PaymentsComponent implements OnDestroy {
     this._paymentManager.getCodes();
   }
 
+  /** Helper method that allows to trigger the removeness of all codes. */
   destroyCodes(): void {
     this._paymentManager.destroyCodes();
   }
 
+  /** Helper method that allows to highlight a given code to display details. */
   highlightChecksum(data: PaymentData): void {
     this.checksumHighlighted = data;
   }
 
+  /** Helper method that reverts highlighted. */
   hideChecksum() {
     this.checksumHighlighted = undefined;
   }
 
+  /**
+   * Before destroy GeneratorComponent, ensures that all subscriptions are
+   * also destroyed: code generation, matrix and payment.
+   */
   ngOnDestroy() {
     this._subscription.unsubscribe();
   }
 
+  /**
+   * Helper method to start to subscribe to generated matrix and code,
+   * located in CodeManager service.
+   */
   private _subscribeMatrix(): void {
     this._subscription.add(
       this._codeManager.generatedCodeObservable$.subscribe((generatedCode) => {
@@ -97,6 +128,10 @@ export class PaymentsComponent implements OnDestroy {
     );
   }
 
+  /**
+   * Helper method to start to subscribe to matrix and matrix generation status.
+   * This received value maps with PaymentComponent's local matrix and status properties.
+   */
   private _subscribePaymentManager(): void {
     this._subscription.add(
       this._paymentManager.paymentDataObservable$.subscribe((x) => {
@@ -105,6 +140,12 @@ export class PaymentsComponent implements OnDestroy {
     );
   }
 
+  /**
+   * Helper method that evaluates if the payment form is valid
+   * against the input validation rules. It also updates the errorMessages property
+   * with related error messages.
+   * @returns the payment validation status
+   */
   private _manageFormInvalidity(): boolean {
     this.errorMessages = [];
     if (!this.code) {

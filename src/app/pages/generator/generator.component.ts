@@ -39,14 +39,6 @@ export class GeneratorComponent implements OnDestroy {
   }
 
   /**
-   * Before destroy GeneratorComponent, ensures that all subscriptions are
-   * also destroyed: code generation and matrix.
-   */
-  ngOnDestroy() {
-    this._subscription.unsubscribe();
-  }
-
-  /**
    * Helper method to control if 2D grid status: running or stopped.
    */
   toggleStatus(): void {
@@ -65,6 +57,14 @@ export class GeneratorComponent implements OnDestroy {
     }
     this._codeManager.jokerCharacter = this.jokerForm.controls.jokerChar.value;
     this._disableAddButton();
+  }
+
+  /**
+   * Before destroy GeneratorComponent, ensures that all subscriptions are
+   * also destroyed: code generation and matrix.
+   */
+  ngOnDestroy() {
+    this._subscription.unsubscribe();
   }
 
   /**
