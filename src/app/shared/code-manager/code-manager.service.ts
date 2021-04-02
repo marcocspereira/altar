@@ -4,16 +4,20 @@ import { map, switchMap } from 'rxjs/operators';
 import { Matrix } from '../matrix/matrix';
 import { Coordinate } from '../types/coordinate.type';
 import { GeneratedCode } from '../types/generated-code.type';
+import { MatrixDimension } from '../types/matrix-dimension.type';
 
 @Injectable({
   providedIn: 'root',
 })
 export class CodeManagerService {
-  private _matrix = new Matrix(10, 10);
+  private _matrix = new Matrix({ width: 10, height: 10 });
   private _generatedCode = new ReplaySubject<GeneratedCode>(1);
   private _codeGenerationStatus = new BehaviorSubject<boolean>(false);
   private _jokerCharacter: string;
 
+  set matrix(matrixDimension: MatrixDimension) {
+    this._matrix = new Matrix(matrixDimension);
+  }
   set jokerCharacter(value: string) {
     this._jokerCharacter = value;
     this._matrix.jokerCharacter = value;

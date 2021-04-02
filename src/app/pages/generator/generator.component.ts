@@ -19,6 +19,7 @@ export class GeneratorComponent implements OnDestroy {
   errorMessages: Array<string>;
 
   constructor(private _codeManager: CodeManagerService) {
+    // this._codeManager.matrix = { width: 4, height: 4 };
     this._subscribeCodeGenerationStatus();
     this._subscribeMatrix();
     this.jokerForm = this.createForm();

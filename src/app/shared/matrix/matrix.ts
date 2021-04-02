@@ -18,28 +18,28 @@ export class Matrix {
 
   get matrixDimensions(): MatrixDimension {
     return {
-      height: this._height,
-      width: this._width,
-      size: this._size,
+      height: this._dimension.height,
+      width: this._dimension.width,
     };
   }
 
   constructor(
-    private _width: number,
-    private _height: number,
+    private _dimension: MatrixDimension,
     private _validChars: string = 'abcdefghijklmnopqrstuvwxyz'
   ) {
-    if (!this._width || !this._height) {
+    if (!this._dimension.width || !this._dimension.height) {
       throw new Error(
         'Please provide valid width and height to create a matrix!'
       );
     }
-    this._size = this._width * this._height;
+    this._size = this._dimension.width * this._dimension.height;
     this._characters = new Array<string>(this._size);
   }
 
   charByCoordinate(coordinate: Coordinate): string {
-    return this._characters[coordinate.x * this._width + coordinate.y];
+    return this._characters[
+      coordinate.x * this._dimension.width + coordinate.y
+    ];
   }
 
   shuffle(): void {
@@ -67,7 +67,7 @@ export class Matrix {
     while (i <= quantity) {
       const tempX = this._randomize();
       const tempY = this._randomize();
-      const characterIndex = tempY * this._width + tempX;
+      const characterIndex = tempY * this._dimension.width + tempX;
       const tempVal = this._characters[characterIndex];
       if (!tempVal) {
         this._characters[characterIndex] = this.jokerCharacter;
@@ -95,6 +95,6 @@ export class Matrix {
   }
 
   private _randomize(): number {
-    return Math.floor(Math.random() * this._width);
+    return Math.floor(Math.random() * this._dimension.width);
   }
 }
