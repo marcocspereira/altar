@@ -1,5 +1,5 @@
-import { Coordinate } from '../properties/coordinate.type';
-import { MatrixDimension } from '../properties/matrix-dimension.type';
+import { Coordinate } from '../types/coordinate.type';
+import { MatrixDimension } from '../types/matrix-dimension.type';
 
 export class Matrix {
   private _size: number;
