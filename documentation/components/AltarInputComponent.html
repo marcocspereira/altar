@@ -430,6 +430,8 @@
                             <code>disabled</code>
                         </td>
                         <td class="col-md-10">
+                            <div><p>The &#39;disabled&#39; property of input box. </p>
+</div>
                               <p>
                                 <em>Type:</em>    <code>boolean</code>
 
@@ -493,6 +495,8 @@
                             <code>required</code>
                         </td>
                         <td class="col-md-10">
+                            <div><p>The &#39;required&#39; property of text input. </p>
+</div>
                               <p>
                                 <em>Type:</em>    <code>boolean</code>
 
@@ -552,6 +556,12 @@
     </bcode>
                         </td>
                     </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Text to display on the left of text input. </p>
+    </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <table class="table table-sm table-bordered">
@@ -565,6 +575,12 @@
                         <td class="col-md-4">
                             <span class="modifier-icon fa fa-lock"></span><code>_name:     <code>string</code>
     </bcode>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Property to set the input name. Default is &#39;app-altar-input-<number> </p>
+    </div>
                         </td>
                     </tr>
                 </tbody>
@@ -582,6 +598,12 @@
     </bcode>
                         </td>
                     </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>Text to display inside text input while no data is inserted. </p>
+    </div>
+                        </td>
+                    </tr>
                 </tbody>
             </table>
             <table class="table table-sm table-bordered">
@@ -595,6 +617,12 @@
                         <td class="col-md-4">
                             <span class="modifier-icon fa fa-lock"></span><code>_value:     <code>string</code>
     </bcode>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <div class="io-description"><p>The result value. </p>
+    </div>
                         </td>
                     </tr>
                 </tbody>
@@ -667,10 +695,18 @@ let nextInputUniqueId &#x3D; 0;
     },
   ],
 })
+/**
+ * Component with exercises purpose only. It uses ControlValueAcessor to
+ * integrate with Angular forms.
+ */
 export class AltarInputComponent implements OnInit, ControlValueAccessor {
+  /** Property to set the input name. Default is &#x27;app-altar-input-&lt;number&gt; */
   private _name: string &#x3D; &#x60;app-altar-input-${nextInputUniqueId++}&#x60;;
+  /** Text to display on the left of text input. */
   private _label: string &#x3D; &#x27;&#x27;;
+  /** Text to display inside text input while no data is inserted. */
   private _placeholder: string &#x3D; &#x27;&#x27;;
+  /** The result value. */
   private _value: string;
 
   @Input()
@@ -687,8 +723,10 @@ export class AltarInputComponent implements OnInit, ControlValueAccessor {
   set placeholder(val: string) {
     this._placeholder &#x3D; val.toUpperCase();
   }
+  /** The &#x27;required&#x27; property of text input. */
   @Input()
   required: boolean &#x3D; false;
+  /** The &#x27;disabled&#x27; property of input box. */
   @Input()
   disabled: boolean &#x3D; false;
   @Input()

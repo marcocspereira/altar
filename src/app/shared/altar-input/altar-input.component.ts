@@ -18,10 +18,18 @@ let nextInputUniqueId = 0;
     },
   ],
 })
+/**
+ * Component with exercises purpose only. It uses ControlValueAcessor to
+ * integrate with Angular forms.
+ */
 export class AltarInputComponent implements OnInit, ControlValueAccessor {
+  /** Property to set the input name. Default is 'app-altar-input-<number> */
   private _name: string = `app-altar-input-${nextInputUniqueId++}`;
+  /** Text to display on the left of text input. */
   private _label: string = '';
+  /** Text to display inside text input while no data is inserted. */
   private _placeholder: string = '';
+  /** The result value. */
   private _value: string;
 
   @Input()
@@ -38,8 +46,10 @@ export class AltarInputComponent implements OnInit, ControlValueAccessor {
   set placeholder(val: string) {
     this._placeholder = val.toUpperCase();
   }
+  /** The 'required' property of text input. */
   @Input()
   required: boolean = false;
+  /** The 'disabled' property of input box. */
   @Input()
   disabled: boolean = false;
   @Input()

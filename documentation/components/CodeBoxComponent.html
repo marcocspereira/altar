@@ -422,6 +422,8 @@
                             <code>status</code>
                         </td>
                         <td class="col-md-10">
+                            <div><p>Code generation status that is updated by the host. </p>
+</div>
                               <p>
                                 <em>Type:</em>    <code>boolean</code>
 
@@ -460,7 +462,9 @@
   templateUrl: &#x27;./code-box.component.html&#x27;,
   styleUrls: [&#x27;./code-box.component.css&#x27;],
 })
+/** Component that displays the generated code and curresponding status. */
 export class CodeBoxComponent implements OnInit {
+  /** Code generation status that is updated by the host. */
   @Input() status: boolean &#x3D; true;
 
   constructor() {}

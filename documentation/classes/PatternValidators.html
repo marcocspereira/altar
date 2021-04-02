@@ -377,6 +377,13 @@
             <code>src/app/shared/altar-input/pattern-validators/pattern-validators.ts</code>
         </p>
 
+            <p class="comment">
+                <h3>Description</h3>
+            </p>
+            <p class="comment">
+                <p>Class created just for exercise puprose, since angular already provides<br>the pattern validator that could fit the requirement.</p>
+
+            </p>
 
 
             <section>
@@ -400,10 +407,30 @@
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Validates if received control is valid against an alphanumeric validation.</p>
+            </div>
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <ul class="jsdoc-params">
+                                                        <li>
+                                                            <div>
+                                                                <b>control</b>
+                                                            </div>
+                                                            <div>
+                                                                <p>The control to validate.</p>
+            
+                                                            </div>
+                                                        </li>
+                                                </ul>
+                                        </div>
                                         <div class="io-description">
                                             <b>Returns: </b>    <code>ValidationErrors</code>
             
                                         </div>
+                                            <div class="io-description">
+                                                <p>The control validation errors; null otherwise.</p>
+            
+                                            </div>
                                 </td>
                             </tr>
                         </tbody>
@@ -427,10 +454,30 @@
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Validates if received control is valid against an alphabetical validation.</p>
+            </div>
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <ul class="jsdoc-params">
+                                                        <li>
+                                                            <div>
+                                                                <b>control</b>
+                                                            </div>
+                                                            <div>
+                                                                <p>The control to validate.</p>
+            
+                                                            </div>
+                                                        </li>
+                                                </ul>
+                                        </div>
                                         <div class="io-description">
                                             <b>Returns: </b>    <code>ValidationErrors</code>
             
                                         </div>
+                                            <div class="io-description">
+                                                <p>The control validation errors; null otherwise.</p>
+            
+                                            </div>
                                 </td>
                             </tr>
                         </tbody>
@@ -454,10 +501,30 @@
             
                             <tr>
                                 <td class="col-md-4">
+                                        <div class="io-description"><p>Validates if received control is valid against a numeric validation.</p>
+            </div>
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <ul class="jsdoc-params">
+                                                        <li>
+                                                            <div>
+                                                                <b>control</b>
+                                                            </div>
+                                                            <div>
+                                                                <p>The control to validate.</p>
+            
+                                                            </div>
+                                                        </li>
+                                                </ul>
+                                        </div>
                                         <div class="io-description">
                                             <b>Returns: </b>    <code>ValidationErrors</code>
             
                                         </div>
+                                            <div class="io-description">
+                                                <p>The control validation errors; null otherwise.</p>
+            
+                                            </div>
                                 </td>
                             </tr>
                         </tbody>
@@ -469,7 +536,16 @@
     <div class="tab-pane fade tab-source-code" id="source">
         <pre><code class="hljs javascript">import { AbstractControl, ValidationErrors } from &#x27;@angular/forms&#x27;;
 
+/**
+ * Class created just for exercise puprose, since angular already provides
+ * the pattern validator that could fit the requirement.
+ */
 export class PatternValidators {
+  /**
+   * Validates if received control is valid against an alphanumeric validation.
+   * @param control The control to validate.
+   * @returns The control validation errors; null otherwise.
+   */
   static alphanumeric(control: AbstractControl): ValidationErrors | null {
     if (control.value.match(/^[0-9a-zA-Z]+$/)) {
       return null;
@@ -477,6 +553,11 @@ export class PatternValidators {
     return { invalidAlphanumeric: true };
   }
 
+  /**
+   * Validates if received control is valid against an alphabetical validation.
+   * @param control The control to validate.
+   * @returns The control validation errors; null otherwise.
+   */
   static alphabetical(control: AbstractControl): ValidationErrors | null {
     if (control.value.match(/^[a-z]?$/)) {
       return null;
@@ -484,6 +565,11 @@ export class PatternValidators {
     return { invalidAlphabetical: true };
   }
 
+  /**
+   * Validates if received control is valid against a numeric validation.
+   * @param control The control to validate.
+   * @returns The control validation errors; null otherwise.
+   */
   static numeric(control: AbstractControl): ValidationErrors | null {
     if (control.value.match(/^[0-9]+$/)) {
       return null;
