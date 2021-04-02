@@ -5,7 +5,19 @@
   font-weight: bold;
 }
 
+.notification {
+  margin-top: 90px;
+}
+
+.destroy-codes {
+  float: right;
+}
+
 .input-box {
   width: 10%;
   text-align: center;
+}
+
+.code-box {
+  padding-bottom: 50px;
 }
