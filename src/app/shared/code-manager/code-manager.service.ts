@@ -2,8 +2,8 @@ import { Injectable } from '@angular/core';
 import { timer, ReplaySubject, BehaviorSubject, NEVER } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
 import { Matrix } from '../matrix/matrix';
-import { Coordinate } from '../properties/coordinate.type';
-import { GeneratedCode } from '../properties/generated-code.type';
+import { Coordinate } from '../types/coordinate.type';
+import { GeneratedCode } from '../types/generated-code.type';
 
 @Injectable({
   providedIn: 'root',
