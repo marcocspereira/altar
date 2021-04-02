@@ -1,4 +1,5 @@
 import { Component, OnDestroy } from '@angular/core';
+import { TopbarModule } from './shared/topbar/topbar.module';
 
 @Component({
   selector: 'app-root',
@@ -6,7 +7,7 @@ import { Component, OnDestroy } from '@angular/core';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnDestroy {
-  links = [
+  links: Array<TopbarModule> = [
     { title: 'Generator', route: '/generator' },
     { title: 'Payments', route: '/payments' },
   ];
