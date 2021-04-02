@@ -1,0 +1,821 @@
+<!doctype html>
+<html class="no-js" lang="">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>frontend-test documentation</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="icon" type="image/x-icon" href="../images/favicon.ico">
+	    <link rel="stylesheet" href="../styles/style.css">
+    </head>
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top visible-xs">
+            <a href="../" class="navbar-brand">frontend-test documentation</a>
+            <button type="button" class="btn btn-default btn-menu fa fa-bars" id="btn-menu"></button>
+        </div>
+
+        <div class="xs-menu menu" id="mobile-menu">
+            <div id="book-search-input" role="search">
+                <input type="text" placeholder="Type to search">
+            </div>
+            <nav>
+            
+                <ul class="list">
+            
+                    <li class="title">
+                        <a href="../">frontend-test documentation</a>
+                    </li>
+            
+                    <li class="divider"></li>
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                        <ul class="links">
+                                <li class="link">
+                                    <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                </li>
+                                <li class="link">
+                                    <a 
+                                        
+                                         href="../overview.html" 
+                                         href="../overview.html" 
+                                        >
+                                        <span class="fa fa-th"></span>Overview
+                                    </a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="./modules.html" >
+                            <span class="fa fa-archive"></span>
+                            <span>Modules</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-modules-links"
+                            ></span>
+                        </a>
+                        <ul class="links collapse in"
+                                id="xs-modules-links"
+                            >
+                                <li class="link">
+                                    <a href="../modules/AltarInputModule.html" >AltarInputModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/AppModule.html" >AppModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/CodeBoxModule.html" >CodeBoxModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/GeneratorModule.html" >GeneratorModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/PaymentsModule.html" >PaymentsModule</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../modules/TopbarModule.html" >TopbarModule</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-cogs"></span>
+                            <span>Components</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-components-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-components-links"
+                            >
+                                <li class="link">
+                                    <a href="../components/AltarInputComponent.html" >AltarInputComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/AppComponent.html" >AppComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/CodeBoxComponent.html" >CodeBoxComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/GeneratorComponent.html" >GeneratorComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/PaymentsComponent.html" >PaymentsComponent</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../components/TopbarComponent.html" >TopbarComponent</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-file-code-o"></span>
+                            <span>Classes</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-classes-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-classes-links"
+                            >
+                                <li class="link">
+                                    <a href="../classes/Matrix.html" >Matrix</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../classes/PatternValidators.html" >PatternValidators</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                    </li>
+            
+                    <li class="chapter">
+                        <div class="simple">
+                            <span class="fa fa-long-arrow-down"></span>
+                            <span>Injectables</span>
+                            <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                    data-target="#xs-injectables-links"
+                                ></span>
+                        </div>
+                        <ul class="links collapse in"
+                                id="xs-injectables-links"
+                            >
+                                <li class="link">
+                                    <a href="../injectables/CodeManagerService.html"  class="active" >CodeManagerService</a>
+                                </li>
+                                <li class="link">
+                                    <a href="../injectables/PaymentManagerService.html" >PaymentManagerService</a>
+                                </li>
+                        </ul>
+                    </li>
+            
+            
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                    </li>
+            
+                    <li class="chapter">
+                        <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                    </li>
+            
+                    <li class="divider"></li>
+                    <li class="copyright">
+                            Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                        <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                            </a>
+                    </li>
+            
+                </ul>
+            
+            </nav>
+        </div>
+
+        <div class="container-fluid main">
+           <div class="row main">
+               <div class="hidden-xs menu">
+                   <nav>
+                   
+                       <ul class="list">
+                   
+                           <li class="title">
+                               <a href="../">frontend-test documentation</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                   
+                               <div id="book-search-input" role="search">
+                                   <input type="text" placeholder="Type to search">
+                               </div>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../"><span class="fa fa-home"></span>Getting started</a>
+                               <ul class="links">
+                                       <li class="link">
+                                           <a href="../" ><span class="fa fa-file-text-o"></span>README</a>
+                                       </li>
+                                       <li class="link">
+                                           <a 
+                                               
+                                                href="../overview.html" 
+                                                href="../overview.html" 
+                                               >
+                                               <span class="fa fa-th"></span>Overview
+                                           </a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="./modules.html" >
+                                   <span class="fa fa-archive"></span>
+                                   <span>Modules</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#modules-links"
+                                   ></span>
+                               </a>
+                               <ul class="links collapse in"
+                                       id="modules-links"
+                   >
+                                       <li class="link">
+                                           <a href="../modules/AltarInputModule.html" >AltarInputModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/AppModule.html" >AppModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/CodeBoxModule.html" >CodeBoxModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/GeneratorModule.html" >GeneratorModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/PaymentsModule.html" >PaymentsModule</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../modules/TopbarModule.html" >TopbarModule</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-cogs"></span>
+                                   <span>Components</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#components-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="components-links"
+                   >
+                                       <li class="link">
+                                           <a href="../components/AltarInputComponent.html" >AltarInputComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/AppComponent.html" >AppComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/CodeBoxComponent.html" >CodeBoxComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/GeneratorComponent.html" >GeneratorComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/PaymentsComponent.html" >PaymentsComponent</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../components/TopbarComponent.html" >TopbarComponent</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-file-code-o"></span>
+                                   <span>Classes</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#classes-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="classes-links"
+                   >
+                                       <li class="link">
+                                           <a href="../classes/Matrix.html" >Matrix</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../classes/PatternValidators.html" >PatternValidators</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../routes.html" ><span class="fa fa-code-fork"></span>Routes</a>
+                           </li>
+                   
+                           <li class="chapter">
+                               <div class="simple">
+                                   <span class="fa fa-long-arrow-down"></span>
+                                   <span>Injectables</span>
+                                   <span class="menu-toggler fa fa-angle-up" data-toggle="collapse"
+                                           data-target="#injectables-links"
+                   ></span>
+                               </div>
+                               <ul class="links collapse in"
+                                       id="injectables-links"
+                   >
+                                       <li class="link">
+                                           <a href="../injectables/CodeManagerService.html"  class="active" >CodeManagerService</a>
+                                       </li>
+                                       <li class="link">
+                                           <a href="../injectables/PaymentManagerService.html" >PaymentManagerService</a>
+                                       </li>
+                               </ul>
+                           </li>
+                   
+                   
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../miscellaneous.html" ><span class="fa fa-cubes"></span>Miscellaneous</a>
+                           </li>
+                   
+                           <li class="chapter">
+                               <a data-type="chapter-link" href="../coverage.html" ><span class="fa fa-tasks"></span>Documentation coverage</a>
+                           </li>
+                   
+                           <li class="divider"></li>
+                           <li class="copyright">
+                                   Documentation generated using <a href="https://compodoc.github.io/compodoc/" target="_blank">
+                                               <img src="..//images/compodoc-vectorise.svg" class="img-responsive">
+                                   </a>
+                           </li>
+                   
+                       </ul>
+                   
+                   </nav>
+               </div>
+               <div class="content injectable">
+                   <div class="content-data">
+
+
+
+
+<ol class="breadcrumb">
+  <li>Injectables</li>
+  <li>CodeManagerService</li>
+</ol>
+
+<ul class="nav nav-tabs" role="tablist">
+    <li class="active">
+        <a href="#infos" id="infos-tab" role="tab" data-toggle="tab">Infos</a>
+    </li>
+    <li>
+        <a href="#source" role="tab" id="source-tab" data-toggle="tab">Source</a>
+    </li>
+</ul>
+
+<div class="tab-content">
+    <div class="tab-pane fade active in" id="infos">
+        <p class="comment">
+            <h3>File</h3>
+        </p>
+        <p class="comment">
+            <code>src/app/shared/code-manager/code-manager.service.ts</code>
+        </p>
+
+
+            <section>
+                <h3 id="constructor">Constructor</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>constructor()</code>
+                                </td>
+                            </tr>
+            
+                        </tbody>
+                    </table>
+            </section>
+
+            <section>
+                <h3 id="methods">Methods</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Private</span> _generateAndEmitCodes</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play lock">
+                                            <span class="fa fa-lock"></span>
+                                        </span>
+                                    <code>_generateAndEmitCodes()</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Helper method that emits a new code, reference matrix and timestamp, every 2 seconds,<br>since the very begining when generation status is true.</p>
+            </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code>void</code>
+            
+                                        </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Private</span> _getSecondsFromDate</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play lock">
+                                            <span class="fa fa-lock"></span>
+                                        </span>
+                                    <code>_getSecondsFromDate(date: Date)</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Helper method that returns an array with 2 digit seconds of a given date.</p>
+            </div>
+                                        <div class="io-description">
+                                                <b>Parameters :</b>
+                                                <ul class="jsdoc-params">
+                                                        <li>
+                                                            <div>
+                                                                <b>date</b>
+                                                            </div>
+                                                            <div>
+                                                                <p>to get seconds from</p>
+            
+                                                            </div>
+                                                        </li>
+                                                </ul>
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code>number[]</code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                <p>a 2 size array with 1 number each, corresponding to seconds</p>
+            
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Private</span> _calculateCode</b>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <span class="modifier-icon method fa fa-play lock">
+                                            <span class="fa fa-lock"></span>
+                                        </span>
+                                    <code>_calculateCode(seconds: number[])</code>
+                                </td>
+                            </tr>
+            
+                            <tr>
+                                <td class="col-md-4">
+                                        <div class="io-description"><p>Helper method that calculates a code, considering 2 digit seconds<br>and the number of occurencies of 2 characters obtaneid as coordinates<br>from the 2 digit seconds (the original and reverse orders)</p>
+            </div>
+                                        <div class="io-description">
+                                        </div>
+                                        <div class="io-description">
+                                            <b>Returns: </b>    <code>string</code>
+            
+                                        </div>
+                                            <div class="io-description">
+                                                <p>a 2 digit string corresponding to calculated code</p>
+            
+                                            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+
+            <section>
+                <h3 id="inputs">Properties</h3>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Private</span> _codeGenerationStatus</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-lock"></span><code>_codeGenerationStatus:     <code>Subject&lt;boolean&gt;</code>
+            </bcode>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>A subject property that broadcasts the most current code generation status to<br>all subscribers.</p>
+            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Private</span> _generatedCode</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-lock"></span><code>_generatedCode:     <code>ReplaySubject&lt;GeneratedCode&gt;</code>
+            </bcode>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>A subject property that multicasts the generated code with a buffer size of 1.<br>A BehaviourSubject could be a nice solution, however needs a initialization value<br>and since in this scenario the moment zero would be null, this would oblige the<br>subscribers to deal with null values.</p>
+            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Private</span> _jokerCharacter</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-lock"></span><code>_jokerCharacter:     <code>string</code>
+            </bcode>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>The joker character, when setted by a service user. </p>
+            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b><span class="modifier">Private</span> _matrix</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <span class="modifier-icon fa fa-lock"></span><code>_matrix:     <code><a href="../classes/Matrix.html" target="_self" >Matrix</a></code>
+            </bcode>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b> codeGenerationStatusObservable$</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>codeGenerationStatusObservable$:     <code>Observable&lt;boolean&gt;</code>
+            </bcode>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>This property makes the _codeGenerationStatus subject inaccessible for subscribers,<br>to block access to complete, next and arror methods.</p>
+            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b> generatedCodeObservable$</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>generatedCodeObservable$:     <code>Observable&lt;GeneratedCode&gt;</code>
+            </bcode>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>This property makes the _generatedCode subject inaccessible for subscribers,<br>to block access to complete, next and arror methods.</p>
+            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <table class="table table-sm table-bordered">
+                        <tbody>
+                            <tr>
+                                <td class="col-md-4">
+                                    <b> jokerCharacter</b>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <code>jokerCharacter:     <code>string</code>
+            </bcode>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="col-md-4">
+                                    <div class="io-description"><p>Setter to update/remove the joker character.<br>Getter to receive the existing joker character in the system. </p>
+            </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+            </section>
+    </div>
+    <div class="tab-pane fade tab-source-code" id="source">
+        <pre><code class="hljs javascript">import { Injectable } from &#x27;@angular/core&#x27;;
+import { timer, ReplaySubject, Subject, BehaviorSubject, NEVER } from &#x27;rxjs&#x27;;
+import { map, switchMap } from &#x27;rxjs/operators&#x27;;
+import { Matrix } from &#x27;../matrix/matrix&#x27;;
+import { Coordinate } from &#x27;../types/coordinate.type&#x27;;
+import { GeneratedCode } from &#x27;../types/generated-code.type&#x27;;
+import { MatrixDimension } from &#x27;../types/matrix-dimension.type&#x27;;
+
+@Injectable({
+  providedIn: &#x27;root&#x27;,
+})
+export class CodeManagerService {
+  private _matrix &#x3D; new Matrix({ width: 10, height: 10 });
+  /**
+   * A subject property that multicasts the generated code with a buffer size of 1.
+   * A BehaviourSubject could be a nice solution, however needs a initialization value
+   * and since in this scenario the moment zero would be null, this would oblige the
+   * subscribers to deal with null values.
+   * */
+  private _generatedCode &#x3D; new ReplaySubject&lt;GeneratedCode&gt;(1);
+  /**
+   * A subject property that broadcasts the most current code generation status to
+   * all subscribers.
+   */
+  private _codeGenerationStatus &#x3D; new Subject&lt;boolean&gt;();
+  /** The joker character, when setted by a service user. */
+  private _jokerCharacter: string;
+
+  /** Setter to create a new Matrix with a given dimension. */
+  set matrix(matrixDimension: MatrixDimension) {
+    this._matrix &#x3D; new Matrix(matrixDimension);
+  }
+  /** Setter to update/remove the joker character. */
+  set jokerCharacter(value: string) {
+    this._jokerCharacter &#x3D; value;
+    this._matrix.jokerCharacter &#x3D; value;
+  }
+  /** Getter to receive the existing joker character in the system. */
+  get jokerCharacter(): string {
+    return this._jokerCharacter;
+  }
+
+  /**
+   * This property makes the _generatedCode subject inaccessible for subscribers,
+   * to block access to complete, next and arror methods.
+   */
+  generatedCodeObservable$ &#x3D; this._generatedCode.asObservable();
+  /**
+   * This property makes the _codeGenerationStatus subject inaccessible for subscribers,
+   * to block access to complete, next and arror methods.
+   */
+  codeGenerationStatusObservable$ &#x3D; this._codeGenerationStatus.asObservable();
+
+  constructor() {
+    this._generateAndEmitCodes();
+  }
+
+  /** Setter that multicasts the most recent code generation status to observables. */
+  set codeGenerationStatus(value: boolean) {
+    this._codeGenerationStatus.next(value);
+  }
+
+  /**
+   * Helper method that emits a new code, reference matrix and timestamp, every 2 seconds,
+   * since the very begining when generation status is true.
+   */
+  private _generateAndEmitCodes(): void {
+    this.codeGenerationStatusObservable$
+      .pipe(
+        switchMap((generationStaus) &#x3D;&gt;
+          generationStaus ? timer(0, 2000) : NEVER
+        ),
+        map((_) &#x3D;&gt; {
+          const date: Date &#x3D; new Date();
+          const seconds &#x3D; this._getSecondsFromDate(date);
+          this._matrix.shuffle();
+          const code &#x3D; this._calculateCode(seconds);
+          return {
+            referenceMatrix: this._matrix,
+            timestamp: date.toLocaleTimeString(&#x27;en-GB&#x27;),
+            code: code,
+          };
+        })
+      )
+      .subscribe((generatedCode) &#x3D;&gt; {
+        this._generatedCode.next(generatedCode);
+      });
+  }
+
+  /**
+   * Helper method that returns an array with 2 digit seconds of a given date.
+   * @param date to get seconds from
+   * @returns a 2 size array with 1 number each, corresponding to seconds
+   */
+  private _getSecondsFromDate(date: Date &#x3D; new Date()): number[] {
+    const seconds &#x3D; date.getSeconds().toString().split(&#x27;&#x27;);
+    if (seconds.length &#x3D;&#x3D;&#x3D; 1) {
+      seconds.unshift(&#x27;0&#x27;);
+    }
+    return seconds.map((x) &#x3D;&gt; parseInt(x, 10));
+  }
+
+  /**
+   * Helper method that calculates a code, considering 2 digit seconds
+   * and the number of occurencies of 2 characters obtaneid as coordinates
+   * from the 2 digit seconds (the original and reverse orders)
+   *  @returns a 2 digit string corresponding to calculated code
+   */
+  private _calculateCode(seconds: number[]): string {
+    const coordinateXY: Coordinate &#x3D; { x: seconds[0], y: seconds[1] };
+    const coordinateYX: Coordinate &#x3D; { x: seconds[1], y: seconds[0] };
+    const firstChar &#x3D; this._matrix.charByCoordinate(coordinateXY);
+    const secondChar &#x3D; this._matrix.charByCoordinate(coordinateYX);
+    const firstCharOccurrences &#x3D; this._matrix.charOccurrences(firstChar) % 10;
+    const secondCharOccurrences &#x3D; this._matrix.charOccurrences(secondChar) % 10;
+
+    return firstCharOccurrences.toString() + secondCharOccurrences.toString();
+  }
+}
+</code></pre>
+    </div>
+</div>
+
+
+
+
+
+
+
+                   </div><div class="search-results">
+    <div class="has-results">
+        <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+        <ul class="search-results-list"></ul>
+    </div>
+    <div class="no-results">
+        <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+    </div>
+</div>
+</div>
+           </div>
+       </div>
+
+       <script src="../js/libs/bootstrap-native.js"></script>
+
+       <script src="../js/libs/es6-shim.min.js"></script>
+       <script src="../js/libs/EventDispatcher.js"></script>
+       <script src="../js/libs/promise.min.js"></script>
+       <script src="../js/libs/zepto.min.js"></script>
+
+       <script src="../js/compodoc.js"></script>
+
+       <script src="../js/search/search.js"></script>
+       <script src="../js/search/lunr.min.js"></script>
+       <script src="../js/search/search-lunr.js"></script>
+
+       <script src="../js/menu.js"></script>
+       <script src="../js/libs/highlight.pack.js"></script>
+       <script src="../js/libs/highlightjs-line-numbers.min.js"></script>
+       <script src="../js/search/search_index.js"></script>
+       <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                hljs.initHighlightingOnLoad();
+                hljs.initLineNumbersOnLoad();
+            });
+       </script>
+
+    </body>
+</html>
