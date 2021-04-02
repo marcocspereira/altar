@@ -1,0 +1,11 @@
+<span class="input-box-label" style="padding-left: 20px">{{ label }}</span>
+<input
+  class="input is-normal input-box"
+  type="text"
+  [attr.name]="name"
+  [required]="required"
+  [placeholder]="placeholder"
+  [(ngModel)]="value"
+  (ngModelChange)="onChange($event)"
+  (blur)="onTouched()"
+/>
