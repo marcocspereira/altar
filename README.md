@@ -1,7 +1,7 @@
 # Matrix Exercise
 
 - An original from [Altar.io](http://altar.io/), code 0619.
-- [Live demo](https://marcocspereira.github.io/matrix-exercise/)
+- <a href="https://marcocspereira.github.io/matrix-exercise/" target="_blank">Live demo</a>
 
 This mini-project was developed with Angular 11 that involves creating 2 routes:
 
