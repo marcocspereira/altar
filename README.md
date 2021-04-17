@@ -1,6 +1,8 @@
-# Altar | 0619
+# Matrix Exercise
 
-The mini-project involves creating 2 routes:
+An original from [Altar.io](http://altar.io/), code 0619.
+
+This mini-project was developed with Angular 11 that involves creating 2 routes:
 
 - `/generator/`
 - `/payments/`
