@@ -1,0 +1,38 @@
+.matrix-container,
+.code-box {
+  width: 100%;
+}
+
+.matrix-val {
+  float: left;
+  padding: 10px;
+  background-color: #1abc9c;
+  color: #ffffff;
+  text-align: center;
+  border: 1px solid black;
+}
+
+.left-column {
+  text-align: left;
+  padding: 10px;
+}
+
+.right-column {
+  text-align: right;
+}
+
+.input-box-label {
+  line-height: 40px;
+  font-size: 15px;
+  padding-right: 10px;
+  font-weight: bold;
+}
+
+.input-box {
+  width: 20%;
+  text-align: center;
+}
+
+.notification {
+  margin-top: 20px;
+}

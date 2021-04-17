@@ -1,1 +1,88 @@
-<p>payments works!</p>
+<section class="hero is-small">
+  <div class="hero-body">
+    <p class="title">Payments</p>
+    <p class="subtitle">
+      It displays the most recent code and allow to add new codes with a given
+      name and amount. <br />Since that also persists the source matrix, you can
+      check the checksum for each entry.
+    </p>
+  </div>
+</section>
+<div class="card">
+  <div class="card-content">
+    <div class="content">
+      <app-code-box class="code-box" [status]="status">{{ code }}</app-code-box>
+      <form [formGroup]="paymentForm" (submit)="addCode()">
+        <app-altar-input
+          formControlName="name"
+          [label]="'payment'"
+          [placeholder]="'payment'"
+        ></app-altar-input>
+
+        <app-altar-input
+          formControlName="amount"
+          [label]="'amount'"
+          [placeholder]="'aumount'"
+        ></app-altar-input>
+
+        <button class="button is-success add-button" type="submit">
+          + ADD
+        </button>
+        <br />
+      </form>
+      <hr />
+      <table class="table is-hoverable">
+        <thead>
+          <tr>
+            <th>PAYMENT NAME</th>
+            <th>AMOUNT</th>
+            <th>CODE</th>
+            <th>CHECKSUM</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let data of paymentData">
+            <td>{{ data.name }}</td>
+            <td>{{ data.amount }}</td>
+            <td>{{ data.code }}</td>
+            <td>
+              <button class="button is-dark" (click)="highlightChecksum(data)">
+                +
+              </button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <div class="notification" *ngIf="!paymentData">
+        GENERATE AND ADD SOME CODES!
+      </div>
+      <hr />
+      <button class="button is-danger destroy-codes" (click)="destroyCodes()">
+        DESTROY ALL CODES
+      </button>
+      <div class="notification is-danger" *ngIf="errorMessages?.length > 0">
+        <p *ngFor="let errorMessage of errorMessages">- {{ errorMessage }}</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" [ngClass]="{ 'is-active': checksumHighlighted }">
+  <div class="modal-background" (click)="hideChecksum()"></div>
+  <div class="modal-card">
+    <header class="modal-card-head">
+      <p class="modal-card-title">{{ checksumHighlighted?.name }}</p>
+    </header>
+    <section class="modal-card-body">
+      <b>Amount:</b> {{ checksumHighlighted?.amount }}<br />
+      <b>Code:</b> {{ checksumHighlighted?.code }}<br />
+      <b>Matrix chars:</b>
+      <span *ngFor="let item of checksumHighlighted?.matrix._characters">
+        {{ item }}
+      </span>
+    </section>
+    <footer class="modal-card-foot">
+      <button class="button" (click)="hideChecksum()">Close</button>
+    </footer>
+  </div>
+</div>

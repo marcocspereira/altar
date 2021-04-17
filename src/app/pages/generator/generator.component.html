@@ -1,1 +1,65 @@
-<p>generator works!</p>
+<section class="hero is-small">
+  <div class="hero-body">
+    <p class="title">Generator</p>
+    <p class="subtitle">
+      It generates a code every 2 seconds. <br />You can place a joker character
+      with a weight of 20% that can be updated/removed after 4 seconds of the
+      input.
+    </p>
+  </div>
+</section>
+
+<div class="card">
+  <div class="card-content">
+    <div class="content">
+      <div class="columns">
+        <div class="column is-half left-column">
+          <form [formGroup]="jokerForm" (submit)="addJokerChar()">
+            <app-altar-input
+              formControlName="jokerChar"
+              [label]="'character'"
+              [placeholder]="'chr'"
+            ></app-altar-input>
+
+            <button
+              class="button is-success add-button"
+              type="submit"
+              id="jokerSubmitButton"
+            >
+              + ADD
+            </button>
+          </form>
+        </div>
+        <div class="column is-half right-column">
+          <button
+            (click)="toggleStatus()"
+            class="button"
+            [ngClass]="{
+              'is-success': !status,
+              'is-danger': status
+            }"
+          >
+            {{ status ? "STOP GENERATE 2D GRID" : "START GENERATE 2D GRID" }}
+          </button>
+        </div>
+      </div>
+
+      <div
+        *ngFor="let char of matrixChars; let i = index"
+        class="matrix-container"
+      >
+        <div class="matrix-val" [ngStyle]="{ width: 100 / matrixWidth + '%' }">
+          {{ char }}
+        </div>
+      </div>
+      <div class="notification" *ngIf="!matrixChars">
+        START GENERATING YOUR 2D GRID!
+      </div>
+
+      <app-code-box class="code-box" [status]="status">{{ code }}</app-code-box>
+      <div class="notification is-danger" *ngIf="errorMessages?.length > 0">
+        <p *ngFor="let errorMessage of errorMessages">- {{ errorMessage }}</p>
+      </div>
+    </div>
+  </div>
+</div>

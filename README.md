@@ -1,6 +1,8 @@
-# Altar | 0619
+# Matrix Exercise
 
-The mini-project involves creating 2 routes:
+An original from [Altar.io](http://altar.io/), code 0619.
+
+This mini-project was developed with Angular 11 that involves creating 2 routes:
 
 - `/generator/`
 - `/payments/`
@@ -65,7 +67,7 @@ The user should be able to **navigate** between the 2 pages whilst not losing an
 
 ---
 
-## To run
+## To run local machine
 
 - to run the app: `http://localhost:4200`
 - to run the tests: `http://localhost:9876`
@@ -88,3 +90,15 @@ To run the app:
 $ docker-compose up altar_app       # to install and run app
 $ docker-compose up altar_test      # to call karma test runner
 ```
+
+When running `docker-compose up altar_app`, the documentation is created, so it can take some more time than normal.
+
+---
+
+## Documentation
+
+[Compodoc](https://compodoc.app/) is the tool used to generate documentation. If you're running with docker, the documentation step is included in `docker-compose up altar_app`.
+
+If you're running locally, run `npm run compodoc` to generate the most recent documentation.
+
+Anyway, it exists a documentation folder where the [index.html](documentation/index.html) is the main page to study this project documentation. Open in a web browser.

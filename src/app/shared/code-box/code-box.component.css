@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.code-holder {
+  border: 0.1em solid #000000;
+  border-radius: 0.4em;
+  min-width: 10%;
+  padding: 0.8em;
+}
+
+.live {
+  color: rgb(236, 20, 20);
+}
